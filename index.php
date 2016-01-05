@@ -5,6 +5,6 @@ echo "OneMoreLine\n"
 echo "MyTest\n";
 echo "Static\n";
 echo "Test\n";
-echo "Meh\n";
+echo "Mooh\n";
 
 ?>
