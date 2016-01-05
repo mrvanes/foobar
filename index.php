@@ -3,5 +3,6 @@
 echo "Foobar\n";
 echo "OneMoreLine\n"
 echo "MyTest\n";
+echo "Test\n";
 
 ?>
