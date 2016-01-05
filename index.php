@@ -4,5 +4,6 @@ echo "Foobar\n";
 echo "OneMoreLine\n"
 echo "MyTest\n";
 echo "Static\n";
+echo "Test\n";
 
 ?>
