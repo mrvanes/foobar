@@ -1,0 +1,6 @@
+---
+# BBTravis file
+script:
+  - echo "Buildbot"
+  - echo "Test"
+  - yamllint .
