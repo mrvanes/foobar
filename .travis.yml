@@ -1,6 +1,10 @@
 ---
-# BBTravis file
+# Travis file
+language: python
+
+python:
+  - "2.7"
+
 script:
   - echo "Buildbot"
-  - echo "Test"
   - yamllint .
