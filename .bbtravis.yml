@@ -1,4 +1,5 @@
 ---
 # BBTravis file
 script:
+  - echo "Test"
   - yamllint .
