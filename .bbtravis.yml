@@ -1,0 +1,4 @@
+---
+# BBTravis file
+script:
+  - yamllint .
