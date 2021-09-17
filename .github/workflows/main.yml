@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Asset
-          run: echo "::set-output name=asset::static_files-${GITHUB_REF#refs/tags/}.tgz"
+          run: echo ::set-output name=asset::"static_files-${GITHUB_REF#refs/tags/}.tgz"
           id: asset
 
       - name: Package release
