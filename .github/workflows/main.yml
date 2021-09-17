@@ -26,13 +26,6 @@ jobs:
         run: |
           tar -czf static_files-${{ steps.asset.outputs.asset }}.tgz static
 
-      - name: Archive production artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: static_files
-          path: |
-            static_files-${{ steps.asset.outputs.asset }}.tgz
-
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
