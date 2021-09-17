@@ -16,10 +16,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Asset
+          run: echo "::set-output name=asset::static_files-${{ github.event.release.tag_name }}.tgz"
+          id: asset
+
+      - name: Package release
+        run: |
+          tar -czf ${{ steps.asset.outputs.asset }} static
+
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
         with:
           name: static_files
           path: |
-            static
+            ${{ steps.asset.outputs.asset }}
 
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ${{ steps.asset.outputs.asset }}
