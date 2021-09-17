@@ -1,7 +1,7 @@
 ---
 
 on:
-  push:
+  #push:
   release:
     tags:
       - '*'
@@ -18,8 +18,8 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Asset
-#        run: echo ::set-output name=asset::${GITHUB_REF#refs/tags/}
-        run: echo ::set-output name=asset::${GITHUB_REF#refs/heads/}
+        run: echo ::set-output name=asset::${GITHUB_REF#refs/tags/}
+        #run: echo ::set-output name=asset::${GITHUB_REF#refs/heads/}
         id: asset
 
       - name: Package release
