@@ -22,3 +22,8 @@ jobs:
         run: |
           touch HelloWorld
           echo "Hello world ${{ github.event.inputs.foobar }}" >> HelloWorld
+      # Hello World example
+      - name: Hello World 2
+        run: |
+          touch HelloWorld2
+          echo "Hello world ${{ github.event.inputs.foobar }}" >> HelloWorld2
