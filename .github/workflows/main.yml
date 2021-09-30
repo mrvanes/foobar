@@ -7,7 +7,6 @@ on:
       - '*'
     types: [published]
 
-
 jobs:
   build:
     name: Build phase
@@ -19,7 +18,6 @@ jobs:
 
       - name: Asset
         run: echo ::set-output name=asset::${GITHUB_REF#refs/tags/}
-        #run: echo ::set-output name=asset::${GITHUB_REF#refs/heads/}
         id: asset
 
       - name: Package release
